@@ -22,19 +22,27 @@ public class ItemController {
 
   @Autowired
   private ItemService itemService;
-
+  
   @GetMapping
   public String index(Model model) {
     model.addAttribute("items", itemService.findAll());
     return "index";
   }
+  
+  /* http://localhost:8080/items/login */
+  @GetMapping("/login")
+  public String login() {
+	  return "login";
+  }
 
+  /* http://localhost:8080/items/{id} */
   @GetMapping("{id}")
   public String show(@PathVariable Long id, Model model) {
     model.addAttribute("item", itemService.findOne(id));
     return "show";
   }
 
+  /* http://localhost:8080/items/new */
   @GetMapping("new")
   public String newItem(@ModelAttribute("item") Item item, Model model) {
     return "new";
