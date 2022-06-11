@@ -6,13 +6,47 @@
 	<link rel="stylesheet" href="/css/bootstrap.min.css" />
 	<title>ログイン</title>
 </head>
+
 <body>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/items">商品管理デモ</a>
-			</div>
+	<header>
+		<!-- ナビゲーション --> 
+		<div class="navbar navbar-dark bg-dark shadow-sm">
+			<a href="/items" class="navbar-brand d-flex align-items-center">
+				<strong>商品管理デモ</strong>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 		</div>
-	</nav>
+		<!-- ジャンボトロン -->
+		<main role="main">
+			<div class="jumbotron text-center">
+			 <div class="container mt-4">
+			 	<h1 class="jumbotron-heading">ログイン</h1>
+			 	<p class="lead text-muted">ユーザーIDとパスワードを入力してください。</p>
+			 	
+			 	<!-- ログイン画面の入力フォーム -->
+			 	<form>
+			 		<div class="mb-3">
+			 			<label for="Userid" class="form-label">ユーザーID</label>
+			 			<input type="email" class="form-control" id="Userid">
+			 		</div>
+			 		<div class="mb-3">
+   						<label for="exampleInputPassword1" class="form-label">パスワード</label>
+   						<input type="password" class="form-control" id="exampleInputPassword1">
+   					</div>
+			 	</form>
+			 	<p>
+        			<a href="#" class="btn btn-primary my-2">新規登録</a>
+        			<a href="#" class="btn btn-secondary my-2">ログイン</a>
+      			</p>
+			 </div>
+			</div>
+		</main>
+		
+	</header>
+
+
+		
 </body>
 </html>
