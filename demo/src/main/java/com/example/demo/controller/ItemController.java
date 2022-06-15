@@ -53,7 +53,17 @@ public class ItemController {
     model.addAttribute("item", itemService.findOne(id));
     return "edit";
   }
+  
+  @GetMapping("/login/OK")
+  public String loginUser_OK(@PathVariable Long id,@ModelAttribute("user") Item item, Model model) {
+	return "redirect:/items";
+  }
+  @GetMapping("/login/NG")
+  public String loginUser_NG() {
+	return "redirect:/items";
+  }
 
+  
   @PostMapping
   public String create(@ModelAttribute("item") @Validated Item item, BindingResult result, Model model) {
     if (result.hasErrors()) {
@@ -63,7 +73,7 @@ public class ItemController {
       return "redirect:/items";
     }
   }
-
+    
   @PutMapping("{id}")
   public String update(@PathVariable Long id, @ModelAttribute("item") @Validated Item item, BindingResult result, Model model) {
     if (result.hasErrors()) {

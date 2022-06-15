@@ -5,3 +5,13 @@ CREATE TABLE IF NOT EXISTS item (
   vendor varchar(255),
   PRIMARY KEY (id)
 );
+
+CREATE TABLE IF NOT EXISTS login_user (
+  id bigint NOT NULL AUTO_INCREMENT,
+  userid varchar(255),
+  password varchar(255),
+  PRIMARY KEY (id)
+);
+
+
+
